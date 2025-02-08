@@ -1,0 +1,77 @@
+<!DOCTYPE StreamControlLayout>
+<layout width="400" height="370" tabbed="1">
+ <tab name="Match Info">
+  <label x="10" y="14" width="46" height="13">Player 1</label>
+<label x="10" y="44" width="46" height="13">Player 2</label>
+<label x="10" y="74" width="46" height="13">Round</label>
+<label x="10" y="104" width="46" height="13">Game</label>
+<lineEdit id="p1Name" x="60" y="10" width="170" height="20" dataSet="players.csv" dataField="1"/>
+<lineEdit id="p1Team" x="240" y="10" width="60" height="20" dataSet="players.csv" dataField="2" master="p1Name"/>
+<spinBox id="p1Score" x="310" y="9" width="42" height="25" maximum="99"/>
+<lineEdit id="p2Name" x="60" y="40" width="170" height="20" dataSet="players.csv" dataField="1"/>
+<lineEdit id="p2Team" x="240" y="40" width="60" height="20" dataSet="players.csv" dataField="2" master="p2Name"/>
+<spinBox id="p2Score" x="310" y="39" width="42" height="25" maximum="99"/>
+<lineEdit id="round" x="60" y="70" width="100" height="20" dataSet="round.csv" dataField="1"/>
+<button type="swap" x="170" y="70" width="60" height="23"  tooltip="Swap the Scores" id="swap1" swapSet1="p1Name,p1Team,p1Score" swapSet2="p2Name,p2Team,p2Score">Swap</button>
+<button type="reset" x="240" y="70" width="60" height="23" tooltip="Reset the Scores" id="reset1" reset="p1Score,p2Score">Reset</button>
+<button type="reset" x="310" y="70" width="60" height="23" tooltip="Clear Match Info" id="reset2" reset="p1Name,p1Team,p1Score,p2Name,p2Team,p2Score">Clear</button>
+<comboBox id="game" editable="1" x="60" y="100" width="100" height="20">
+<comboItem>TEKKEN8</comboItem>
+</comboBox>
+<tabSet x="10" y="134" width="381" height="160">
+
+<tab name="Team Battle" scrollable="0" >
+<checkBox id="teambattleflag" x="285" y="2" width="80" height="14">Teambattle</checkBox>
+<label x="10" y="14" width="46" height="13">Team 1</label>
+<label x="10" y="34" width="46" height="13">Member1</label>
+<label x="10" y="54" width="46" height="13">Member2</label>
+<label x="10" y="74" width="46" height="13">Member3</label>
+<lineEdit id="t1mem1name" x="60" y="30" width="100" height="10" dataSet="players.csv" dataField="1"/>
+<lineEdit id="t1mem2name" x="60" y="50" width="100" height="10" dataSet="players.csv" dataField="1"/>
+<lineEdit id="t1mem3name" x="60" y="70" width="100" height="10" dataSet="players.csv" dataField="1"/>
+<checkBox id="t1mem1flag" x="162" y="32" width="15" height="15"></checkBox>
+<checkBox id="t1mem2flag" x="162" y="52" width="15" height="15"></checkBox>
+<checkBox id="t1mem3flag" x="162" y="72" width="15" height="15"></checkBox>
+<label x="200" y="14" width="46" height="13">Team 2</label>
+<label x="200" y="34" width="46" height="13">Member1</label>
+<label x="200" y="54" width="46" height="13">Member2</label>
+<label x="200" y="74" width="46" height="13">Member3</label>
+<lineEdit id="t2mem1name" x="250" y="30" width="100" height="10" dataSet="players.csv" dataField="1"/>
+<lineEdit id="t2mem2name" x="250" y="50" width="100" height="10" dataSet="players.csv" dataField="1"/>
+<lineEdit id="t2mem3name" x="250" y="70" width="100" height="10" dataSet="players.csv" dataField="1"/>
+<checkBox id="t2mem3flag" x="352" y="32" width="15" height="15"></checkBox>
+<checkBox id="t2mem2flag" x="352" y="52" width="15" height="15"></checkBox>
+<checkBox id="t2mem1flag" x="352" y="72" width="15" height="15"></checkBox>
+<button type="swap" x="180" y="96" width="60" height="23" tooltip="Swap the team" id="teamswap" swapSet1="t1mem1name,t1mem2name,t1mem3name" swapSet2="t2mem1name,t2mem2name,t2mem3name">Swap</button>
+
+
+</tab>
+</tabSet>
+
+ </tab>
+ <tab name="Commentary">
+  <label x="10" y="14" width="46" height="13">Comm 1</label>
+  <label x="10" y="44" width="46" height="13">Comm 2</label>
+  <lineEdit id="comm1" x="60" y="10" width="321" height="20" />
+  <lineEdit id="comm2" x="60" y="40" width="321" height="20" />
+ </tab>
+ <tab name="Lower3rd">
+  <label x="10" y="14" width="46" height="13">Ltrd 1</label>
+  <label x="10" y="44" width="46" height="13">Ltrd 2</label>
+  <lineEdit id="LText1" x="60" y="10" width="321" height="20" />
+  <lineEdit id="LText2" x="60" y="40" width="321" height="20" />
+  <lineEdit id="LText3" x="60" y="70" width="321" height="20" />
+ </tab>
+ <tab name="Misc 2">
+  <label x="10" y="14" width="46" height="13">mText 3</label>
+  <label x="10" y="44" width="46" height="13">mText 4</label>
+  <lineEdit id="mText3" x="60" y="10" width="321" height="20" />
+  <lineEdit id="mText4" x="60" y="40" width="321" height="20" />
+ </tab>
+ <tab name="Misc 3">
+  <label x="10" y="14" width="46" height="13">mText 3</label>
+  <label x="10" y="44" width="46" height="13">mText 4</label>
+  <lineEdit id="mText3" x="60" y="10" width="321" height="20" />
+  <lineEdit id="mText4" x="60" y="40" width="321" height="20" />
+ </tab>
+</layout>
