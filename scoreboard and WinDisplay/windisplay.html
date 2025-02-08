@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="Css/winstyle.css">
+     </head>
+    <body>
+        <div id="diplaywrapper">
+            <div id="imagebackground">
+
+            <video id="winner" class="bg" width="1920" height="1080" autoplay="autoplay">
+                <source src="./ImageBackground/winscreen/winner.webm" type="video/webm" />
+              </video>
+               <div class="container">
+              <img id="characterimg"class="bg" src="./ImageBackground/character/Zafina.png">
+             <img id="characterimgshadow"class="bg" src="./ImageBackground/character/Zafina.png">
+              </div>
+              <img class="bg" style="opacity: 0;" src="./ImageBackground/winscreen/character place holder 2.png">
+
+            <video id="frontpanel" class="bg" width="1920" height="1080" autoplay="autoplay">
+                <source src="./ImageBackground/winscreen/frontpanel.webm" type="video/webm" />
+            </video>
+
+            <video id="backpanel" class="bg" width="1920" height="1080" autoplay="autoplay">
+                <source src="./ImageBackground/winscreen/backpanel.webm" type="video/webm" />
+            </video>
+           <!-- <video id="particleoverlay" class="bg" width="1920" height="1080" autoplay="autoplay">
+                <source src="./ImageBackground/winscreen/particle.webm" type="video/webm" />
+            </video>-->
+                
+            <img id="background"class="bg" src="./ImageBackground/winscreen/bg2.png">
+
+           
+            </div>
+                
+                <span id="chname"></span>
+                <span id="winnername"></span>
+               
+
+
+            <div id="ticker">
+                <span id="p1team"></span>  
+                <span id="p1name"></span>
+                <span> VS </span>
+                <span id="p2team"></span>
+                <span id="p2name"></span>
+                <span>|</span>
+                <span id="round"></span>
+            </div>
+        </div>
+
+        <script src="./js/gsap.min.js"></script>
+        <script src="./js/windisplay.js"></script>
+        <script src="./js/character.js"></script>
+        
+    
+        
+          
+              
+        
+
+    </body>
+
+</html>
+

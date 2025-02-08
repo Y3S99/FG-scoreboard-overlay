@@ -1,0 +1,66 @@
+<!DOCTYPE StreamControlLayout>
+<layout width="400" height="330" tabbed="1">
+ <tab name="Match Info">
+  <label x="10" y="14" width="46" height="13">Player 1</label>
+<label x="10" y="44" width="46" height="13">Player 2</label>
+<label x="10" y="74" width="46" height="13">Round</label>
+<label x="10" y="104" width="46" height="13">Game</label>
+<lineEdit id="p1Name" x="60" y="10" width="170" height="20" dataSet="players.csv" dataField="1"/>
+<lineEdit id="p1Team" x="240" y="10" width="60" height="20" dataSet="players.csv" dataField="2" master="p1Name"/>
+<spinBox id="p1Score" x="310" y="9" width="42" height="25" maximum="99"/>
+<lineEdit id="p2Name" x="60" y="40" width="170" height="20" dataSet="players.csv" dataField="1"/>
+<lineEdit id="p2Team" x="240" y="40" width="60" height="20" dataSet="players.csv" dataField="2" master="p2Name"/>
+<spinBox id="p2Score" x="310" y="39" width="42" height="25" maximum="99"/>
+<lineEdit id="round" x="60" y="70" width="100" height="20" dataSet="round.csv" dataField="1"/>
+<button type="swap" x="170" y="70" width="60" height="23"  tooltip="Swap the Scores" id="swap1" swapSet1="p1Name,p1Team,p1Score" swapSet2="p2Name,p2Team,p2Score">Swap</button>
+<button type="reset" x="240" y="70" width="60" height="23" tooltip="Reset the Scores" id="reset1" reset="p1Score,p2Score">Reset</button>
+<button type="reset" x="310" y="70" width="60" height="23" tooltip="Clear Match Info" id="reset2" reset="p1Name,p1Team,p1Score,p2Name,p2Team,p2Score">Clear</button>
+<comboBox id="game" editable="1" x="60" y="100" width="100" height="20">
+<comboItem>TEKKEN8</comboItem>
+</comboBox>
+<tabSet x="10" y="134" width="381" height="130">
+<tab name="winner display" scrollable="0">
+<label x="10" y="14" width="46" height="13">Player 1</label>
+<comboBox id="p1character" editable="1" x="60" y="10" width="90" height="20" dataSet="character.csv" >
+</comboBox>
+<label x="160" y="14" width="46" height="13">Player 2</label>
+<comboBox id="p2character" editable="1" x="206" y="10" width="90" height="20" dataSet="character.csv" >
+</comboBox>
+<comboBox id="winnerflag" editable="1" x="10" y="50" width="10" height="20">
+</comboBox>
+<button type="setButton" widget="winnerflag" id="p1win" x="100" y="50" width="32" height="23" value="p1win" saveonclick="1" >p1win</button>
+<button type="setButton" widget="winnerflag" id="p2win" x="150" y="50" width="32" height="23" value="p2win" saveonclick="1">p2win</button>
+<button type="setButton" widget="winnerflag" id="off" x="200" y="50" width="32" height="23" value="off" saveonclick="1">off</button>
+
+</tab>
+
+
+</tabSet>
+
+ </tab>
+ <tab name="Commentary">
+  <label x="10" y="14" width="46" height="13">Comm 1</label>
+  <label x="10" y="44" width="46" height="13">Comm 2</label>
+  <lineEdit id="comm1" x="60" y="10" width="321" height="20" />
+  <lineEdit id="comm2" x="60" y="40" width="321" height="20" />
+ </tab>
+ <tab name="Lower3rd">
+  <label x="10" y="14" width="46" height="13">Ltrd 1</label>
+  <label x="10" y="44" width="46" height="13">Ltrd 2</label>
+  <lineEdit id="LText1" x="60" y="10" width="321" height="20" />
+  <lineEdit id="LText2" x="60" y="40" width="321" height="20" />
+  <lineEdit id="LText3" x="60" y="70" width="321" height="20" />
+ </tab>
+ <tab name="Misc 2">
+  <label x="10" y="14" width="46" height="13">mText 3</label>
+  <label x="10" y="44" width="46" height="13">mText 4</label>
+  <lineEdit id="mText3" x="60" y="10" width="321" height="20" />
+  <lineEdit id="mText4" x="60" y="40" width="321" height="20" />
+ </tab>
+ <tab name="Misc 3">
+  <label x="10" y="14" width="46" height="13">mText 3</label>
+  <label x="10" y="44" width="46" height="13">mText 4</label>
+  <lineEdit id="mText3" x="60" y="10" width="321" height="20" />
+  <lineEdit id="mText4" x="60" y="40" width="321" height="20" />
+ </tab>
+</layout>

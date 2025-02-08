@@ -1,0 +1,139 @@
+@font-face {
+   src: url("../fonts/HussarBdOblOne.otf");
+   font-family: "Hussar"; }
+   
+@font-face {
+   src: url("../fonts/MADEINFINITYBlack.otf");
+   font-family: "mn"; }
+
+
+@font-face {
+   src: url("../fonts/CODE\ Bold.otf");
+   font-family: "code"; }
+  
+   :root {
+      --winnernamecolor: rgb(247, 0, 136);
+    }
+
+body {
+    width: 1920px;
+    height: 1080px;
+    overflow:hidden;
+    background: transparent;
+    padding: 0px;
+    margin: 0px;
+    text-transform: uppercase;
+    color: white;
+    /*text-shadow: 2px 2px 3px DimGray;*/
+     }
+
+    
+
+
+    .bg {
+
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        padding: 0px;
+        margin: 0px;
+       }
+       
+        #winner{z-index: 1;}
+         /*#particleoverlay{z-index: -3;}*/
+        #frontpanel{z-index: -1;}
+        #characterimg{z-index: -2;}
+        #characterimgshadow{z-index: -3;}
+        #backpanel{z-index: -4;}
+        #Background{z-index: -5;}
+
+ #ticker{
+    position:absolute;
+    top:1055px;
+    background-color: rgb(15, 15, 15);
+    padding-left: 20px;
+    width : 1920px;
+    height: 25px;
+    line-height: 25px;
+    font-family: "code";
+    
+ }
+
+ #chname{
+    position:absolute;
+    top:675px;
+    left:190px;
+    font-size:82;
+    transform: rotate(14deg);
+    width:1100px;
+    height: 90px;
+    font-family: "Hussar";
+    color: rgb(255, 255, 255);
+
+    
+ }
+
+ #winnername{
+      position:absolute;
+      top:728px;
+      left:172px;
+     /* background-color: aqua;*/
+      font-size:30px;
+      transform: rotate(14deg);
+      width:900px;
+      height: 90px;
+      font-family: "Hussar";
+      color:var(--winnernamecolor);
+      
+   }
+
+   .winner{
+      position:absolute;
+      margin: 0px;
+      text-align: center;
+      top:-30px;
+      font-size:520px;
+      transform: rotate(14deg);
+      width:900px;
+      height: 500px;
+      font-family: "mn" ;
+      
+   }
+
+   
+.container{
+ position: relative;
+   height: 1150px;
+   width: 150px;
+   top: 70px;
+   left: 1054px;  
+  
+}
+
+
+.container #characterimg{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  margin:0;
+     width: auto;
+     max-height: 100%;
+     filter: brightness(0);
+     }
+
+.container #characterimgshadow{
+      position: absolute;
+      left:50%;
+      top:50%;
+      transform: translate(-50%,-50%);
+      margin:0;
+         width: auto;
+         max-height: 100%;
+         filter: brightness(0);
+         opacity: 0.4;
+         }
+  
+
+
+
