@@ -1,0 +1,45 @@
+
+<html>
+<head>
+    <link rel="stylesheet" href="css/Style.css">
+</head>
+<body>
+    <div id="scoreboardBackgound">
+        <img id="roundBG" src="./ImageBackground/activebg/Rounds.png"></img>
+        <img id="p1BG" class="BG" src="./ImageBackground/activebg/P1bg.png" ></img>
+        <img id="p2BG" class="BG" src="./ImageBackground/activebg/P2bg.png" ></img>
+    </div>
+
+    <div id="scoreboard">
+
+        <div id="leftwrapper">
+        <span id="P1score" class="score" ></span>
+        <span id="P1wrapper" class="wrapper">
+            <span id="P1teamname" class="teamname"></span>
+            <span id="P1name" class="name"></span>
+        </div>
+
+        <div id="rightwrapper">
+            <span id="P2score" class="score" ></span>
+            <span id="P2wrapper" class="wrapper">
+                <span id="P2teamname" class="teamname"></span>
+                <span id="P2name" class="name"></span>
+            </div>
+
+        <div id="roundwrapper">
+            <span id="round"></span>
+        </div>
+
+    </div>
+
+    <div id="logowrapper">
+        <img id="logo1" class="logos" src="./ImageBackground/logo/logo1.png" onerror='this.style.display = "none"'></img>
+        <img id="logo2" class="logos" src="./ImageBackground/logo/logo2.png" onerror='this.style.display = "none"'></img>
+        <img id="logo3" class="logos" src="./ImageBackground/logo/logo3.png" onerror='this.style.display = "none"'></img>
+    </div>
+    
+   
+    <script src="./js/gsap.min.js"></script>
+    <script src="./js/ScoreBoard.js"> </script>
+</body>
+</html>

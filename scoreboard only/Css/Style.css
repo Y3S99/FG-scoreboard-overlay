@@ -1,0 +1,109 @@
+@font-face {
+    src: url("../fonts/Moonrising.otf");
+    font-family: "Moonrising"; }
+
+
+@font-face {
+    src: url("../fonts/LEMONMILK-Medium.otf");
+    font-family: "Lemonmilk"; }
+ 
+body {
+    width: 1920px;
+    height: 1080px;
+    overflow: auto;
+    background: transparent;
+    padding: 0px;
+    margin: 0px;
+    text-transform: uppercase;
+    color: white;
+    /*text-shadow: 2px 2px 3px DimGray;*/
+    font-family: "Moonrising"; }
+
+#scoreboardBackgound {
+    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.6));
+   
+}
+
+#p1BG {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        padding: 0px;
+        margin: 0px; }
+        
+#p2BG {
+        position: absolute;
+        left: 0px;
+         top: 0px;
+         padding: 0px;
+         margin: 0px; }
+
+#roundBG {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        padding: 0px;
+        margin: 0px; }
+        
+#round {
+            position: absolute;
+            width: 282px;
+            height: 32px;
+            left: 819px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 25px;
+            /*background-color: blue*/;
+            }
+
+.wrapper {
+           position: absolute;
+           top: 1px;
+           width: 415px; 
+           height: 46px;
+           line-height: 42px;
+           text-align: center;
+           font-size: 37px;
+           /*background-color: blue*/;
+          }
+
+#P1wrapper {
+             left: 235px;
+           
+}
+
+#P2wrapper {
+    left: 1271px;
+}
+
+.teamname {
+    color: lightgray;
+}
+
+.score {
+    position: absolute;
+    top: 0px;
+    width: 40px; 
+    height: 46px;
+    line-height: 42px;
+    text-align: center;
+    font-size: 37px;
+    /*background-color: blue*/;
+}
+
+#P1score {
+left: 671px;
+}
+
+#P2score {
+left: 1209px;
+}
+
+.logos {
+    width: 240px;
+    height: 140px;
+    position: absolute;
+    left: 840px;
+    top: 910px;
+    opacity: .7;
+     }
