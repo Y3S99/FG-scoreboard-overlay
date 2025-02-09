@@ -28,6 +28,8 @@ StreamControl generates a JSON file that is read by an HTML overlay, styled, ani
 
 ## How To Use
 
+To download file hit the code button and download zip
+
 Add an HTML file to the browser source of your streaming program, and use StreamControl to provide overlay data and controls. 
 
 There are three folders, each with a unique layout.
