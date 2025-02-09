@@ -42,6 +42,7 @@ The winner's name and character appear on an animated splashscreen. It contains 
 
 > **Note**
 > ⭕ Each folder have its own streamcontrol with diffrent layout in streamcontrol folder
+
 >⭕ when using scoreboard and winner display, You must add windisplay.html and scoreboard.html to two separate browser sources in order, with windisplay being the top layer.
 
 ![guide](/guide.png)
