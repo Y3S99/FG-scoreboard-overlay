@@ -281,7 +281,7 @@ function resizeTextToFitpname(element) {
 }
 
  // Function to resize text to fit inside a given container player name
-function resizeTextToFitpnameround(element) {
+function resizeTextToFitround(element) {
 
       element.style.fontSize = `25px`;   //defaut fontsize of round
       
@@ -371,3 +371,4 @@ else{ // If there's only one logo
 
 
  //----------github.com/Y3S99-------------
+
