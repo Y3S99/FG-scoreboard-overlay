@@ -85,9 +85,9 @@ function init(){        // Main initialization function
                     p2scoreelement.innerHTML=p2Score;
                     roundelement.innerHTML=round;
                 
-                    resizeTextToFit(roundwrap);    // Adjust text size to fit the available space
-                    resizeTextToFit(p1textwrapper);
-                    resizeTextToFit(p2textwrapper);
+                    resizeTextToFitround(roundwrap);    // Adjust text size to fit the available space
+                    resizeTextToFitpname(p1textwrapper);
+                    resizeTextToFitpname(p2textwrapper);
                     
                     startupanmiation();      // Trigger animation for the first load
                     startup=false;           // Set the startup flag to false to indicate it's no longer the first load
@@ -134,7 +134,7 @@ function init(){        // Main initialization function
                             onComplete:function(){
                                 p1teamelement.innerHTML=p1Team;
                                 p1nameelement.innerHTML=p1Name;
-                                resizeTextToFit(p1textwrapper); // Resize text after updating
+                                resizeTextToFitpname(p1textwrapper); // Resize text after updating
                             }
                         })
                         
@@ -159,7 +159,7 @@ function init(){        // Main initialization function
                             onComplete:function(){
                                 p2teamelement.innerHTML=p2Team;
                                 p2nameelement.innerHTML=p2Name;
-                                resizeTextToFit(p2textwrapper);
+                                resizeTextToFitpname(p2textwrapper);
                             }
                         })
                         
@@ -184,7 +184,7 @@ function init(){        // Main initialization function
                             ease: "power1.in",
                             onComplete:function(){
                                 roundelement.innerHTML=round;
-                                resizeTextToFit(roundwrap);  // Resize round text after updating
+                                resizeTextToFitround(roundwrap);  // Resize round text after updating
                             }
                         })
                         
@@ -564,8 +564,8 @@ function startupanmiation(){       // Function to handle startup animations for 
 
     }
 
-    // Function to resize text to fit inside a given container
-function resizeTextToFit(element) {
+    // Function to resize text to fit inside a given container for playername
+function resizeTextToFitpname(element) {
    element.style.fontSize = `37px`;   //defaut fontsize of names
 
 
@@ -588,6 +588,34 @@ function resizeTextToFit(element) {
     // Apply the final font size
     element.style.fontSize = `${fontSize}px`;
 }
+
+// Function to resize text to fit inside a given container for round
+function resizeTextToFitround(element) {
+   element.style.fontSize = `25px`;   //defaut fontsize of names
+
+
+    const maxWidth = element.clientWidth;
+    const maxHeight = element.clientHeight;
+    const minFontSize = 8; // Minimum font size in pixels
+    let fontSize = parseInt(window.getComputedStyle(element).fontSize, 10);
+    let textFits = false;
+ 
+    // Loop to gradually decrease font size until the text fits
+    while (!textFits && fontSize > minFontSize) {
+        element.style.fontSize = `${fontSize}px`;
+        if (element.scrollWidth <= maxWidth && element.scrollHeight <= maxHeight) {
+            textFits = true;
+        } else {
+            fontSize -= 1;
+        }
+    }
+
+    // Apply the final font size
+    element.style.fontSize = `${fontSize}px`;
+}
+
+
+
 
  // Function to resize text to fit inside a given container exclusive for teambattle names
  function resizeTextToFitTB(element) {
@@ -701,6 +729,7 @@ else{ // If there's only one logo
 
 
 }
+
 
 
 //----------github.com/Y3S99-------------
